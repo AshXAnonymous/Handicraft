@@ -1,12 +1,11 @@
 import React, { useState, useEffect } from "react";
-import banner1 from "@/assets/banner1.png";
-import banner2 from "@/assets/banner2.png";
-import banner3 from "@/assets/banner3.png";
+import banner1 from "../../assets/banner1.png";
+import banner2 from "../../assets/banner2.png";
+import banner3 from "../../assets/banner3.png";
 
 const banners = [banner1, banner2, banner3];
 
-
-const Banner = ({ScrolltoProducts}) => {
+const Banner = ({ ScrolltoProducts }) => {
   const [currentIndex, setCurrentIndex] = useState(0);
 
   // Auto-slide every 4 seconds
@@ -20,7 +19,6 @@ const Banner = ({ScrolltoProducts}) => {
 
   return (
     <section className="relative w-full h-[65vh] mt-[14vh] overflow-hidden rounded-xl shadow-lg">
-
       {/* Sliding Images */}
       <div
         className="flex w-full h-full transition-transform duration-700 ease-in-out"
@@ -47,25 +45,27 @@ const Banner = ({ScrolltoProducts}) => {
         <p className="mt-3 text-lg md:text-xl drop-shadow-md">
           Art You Can Own
         </p>
-        <button onClick={ScrolltoProducts} className="
-  mt-6 
-  bg-[#8B5E34] 
-  px-8 py-3 
-  text-lg 
-  rounded-full 
-  font-semibold 
-  text-[#F9F5F0]
-  shadow-[0_4px_0_#6F4F28]
-  hover:shadow-[0_6px_0_#6F4F28]
-  hover:bg-[#7A512C]
-  transition-all 
-  tracking-wide
-  border-2 border-[#D2B48C]
-  hover:-translate-y-0.5
-" >
-  🧵 Shop Now
-</button>
-
+        <button
+          onClick={ScrolltoProducts}
+          className="
+            mt-6 
+            bg-[#8B5E34] 
+            px-8 py-3 
+            text-lg 
+            rounded-full 
+            font-semibold 
+            text-[#F9F5F0]
+            shadow-[0_4px_0_#6F4F28]
+            hover:shadow-[0_6px_0_#6F4F28]
+            hover:bg-[#7A512C]
+            transition-all 
+            tracking-wide
+            border-2 border-[#D2B48C]
+            hover:-translate-y-0.5
+          "
+        >
+          🧵 Shop Now
+        </button>
       </div>
 
       {/* Slide Indicators */}
@@ -84,4 +84,3 @@ const Banner = ({ScrolltoProducts}) => {
 };
 
 export default Banner;
-
